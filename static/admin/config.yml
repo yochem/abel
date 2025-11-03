@@ -1,21 +1,36 @@
 backend:
   name: github
-  repo: abelabelabelabel/abelabelabelabel.github.io
+  repo: yochem/abel # TODO
   branch: main
 media_folder: static/media
 public_folder: /media
-# site_url: https://abelvanoosterwijk.com
+# site_url: https://abelvanoosterwijk.com # TODO
 collections:
-  - name: 'publicaties'
-    label: 'Publicaties'
-    folder: 'content/publicaties'
+  - name: publicaties
+    label: Publicaties
+    folder: content/publicaties
     create: true
     slug: '{{slug}}'
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'markdown' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Is Draft?', name: 'draft', widget: 'boolean' }
-      - { label: 'Subtitle', name: 'summary', widget: 'markdown' }
-      - { label: 'URL', name: 'link', widget: 'string' }
+      - label: Title
+        name: title
+        widget: markdown
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: false
+        hint: Drafts zijn niet zichtbaar op de site.
+      - label: Subtitle
+        name: summary
+        widget: markdown
+        required: false
+      - label: URL
+        name: link
+        widget: string
+        required: false
+        hint: Link naar het artikel. Leeg voor een artikel op deze website.

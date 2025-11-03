@@ -12,6 +12,4 @@
 	{{ $title := print .Title " | " .Site.Title }}
 	{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
 	<title>{{ $title | markdownify | plainify }}</title>
-
-	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
