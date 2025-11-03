@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: abelabelabelabel/abelabelabelabel.github.io
+  name: git-gateway
   branch: main
 media_folder: static/media
 public_folder: /media
