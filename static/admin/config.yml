@@ -34,3 +34,8 @@ collections:
         widget: string
         required: false
         hint: Link naar het artikel. Leeg voor een artikel op deze website.
+      - label: Tekst
+        name: body
+        widget: markdown
+        required: false
+        hint: Mag leeg blijven.
