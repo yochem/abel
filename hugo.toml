@@ -2,5 +2,10 @@ baseURL = 'https://abelvanoosterwijk.com'
 languageCode = 'nl-NL'
 defaultContentLanguage = "nl"
 defaultContentLang = "nl"
-title = 'Abel'
 canonifyURLs = true
+disablekinds = ['section', 'taxonomy']
+
+title = 'Abel van Oosterwijk'
+[params]
+description = 'Publicatielijst van Abel'
+email = 'contact@abelvanoosterwijk.com'
