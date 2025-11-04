@@ -8,34 +8,45 @@ public_folder: /media
 collections:
   - name: publicaties
     label: Publicaties
+    label_singular: Publicatie
     folder: content/publicaties
     create: true
-    slug: '{{slug}}'
     editor:
       preview: false
     fields:
+      - label: Paginanaam
+        name: slug
+        widget: string
+        pattern: ['[a-z0-9_-]+', 'Toegestaan: a-z, 0-9, _ en -']
+        hint: |
+          De paginanaam in de URL:
+          abelvanoosterwijk.com/publicaties/{{ paginanaam }}/.
       - label: Title
         name: title
-        widget: markdown
+        widget: string
+        hint: Je kan `*italics*` en `**bold**` gebruiken.
+      - label: Subtitle
+        name: summary
+        widget: string
+        required: false
+        hint: Je kan `*italics*` en `**bold**` gebruiken.
       - label: Publish Date
         name: date
         widget: datetime
       - label: Draft
         name: draft
         widget: boolean
-        required: false
+        default: false
         hint: Drafts zijn niet zichtbaar op de site.
-      - label: Subtitle
-        name: summary
-        widget: markdown
-        required: false
-      - label: URL
+      - label: Article URL
         name: link
         widget: string
         required: false
-        hint: Link naar het artikel. Leeg voor een artikel op deze website.
-      - label: Tekst
+        hint: |
+          Link naar het artikel op een andere website. Laat leeg voor een
+          artikel op deze website.
+      - label: Article Text
         name: body
         widget: markdown
         required: false
-        hint: Mag leeg blijven.
+        hint: De tekst voor een artikel op deze website.
