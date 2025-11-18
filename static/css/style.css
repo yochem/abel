@@ -1,8 +1,7 @@
 html {
 	background-color: #1b1b1b;
 	min-height: 100vh;
-	font-family: Cambria,serif;
-	margin: 0 auto;
+	font-family: 'Times New Roman', Cambria,serif;
 	font-size: 1.1em;
 	overflow-x: hidden;
 }
@@ -13,16 +12,10 @@ body {
 	margin: 0 auto;
 }
 
-.email {
+#email {
 	font-size: large;
-	/* font-style: italic; */
 	margin-top: 4px;
 }
-
-.title {
-	margin-bottom: 1px;
-}
-
 
 a {
 	color: inherit;
@@ -32,26 +25,23 @@ a[href=''] {
 	cursor: default;
 }
 
-/* main {
-	display: inline-block;
-	vertical-align: top;
-} */
-
-/* to make every new paragraph indent */
-/* p {
-	text-indent: 2em;
-	margin: 0.2em;
-} */
-
 blockquote {
 	border-left: 3px solid grey;
 	margin: 1.5em 1em;
 	padding: 0 10px;
 }
 
-main {
+hr {
 	border-top: grey solid 1px;
+	border-bottom: none;
+}
+
+main {
 	padding-bottom: 10%;
+}
+
+article p {
+	margin: 0;
 }
 
 a:link,
@@ -61,12 +51,13 @@ a:hover {
 	color: inherit;
 }
 
-a.invisible {
+a.nodecoration {
 	text-decoration: none;
 }
 
-h4 {
-	margin-bottom: 0.2em;
+h3 {
+	font-size: 1em;
+	margin-bottom: 0.3em;
 }
 
 img {
@@ -82,14 +73,8 @@ img {
 
 @media only screen and (max-width: 860px) {
 	body {
-		margin-left: 10%;
-		margin-right: 10%;
+		margin-left: 5%;
+		margin-right: 5%;
 		margin-bottom: 10%;
-	}
-
-	main {
-		padding-bottom: 1em;
-		border-top: grey solid 1px;
-		max-width: 100%;
 	}
 }

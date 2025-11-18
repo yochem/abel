@@ -1,10 +1,9 @@
 backend:
   name: github
-  repo: yochem/abel # TODO
+  repo: yochem/abel
   branch: main
 media_folder: static/media
 public_folder: /media
-# site_url: https://abelvanoosterwijk.com # TODO
 collections:
   - name: publicaties
     label: Publicaties
@@ -21,32 +20,31 @@ collections:
         hint: |
           De paginanaam in de URL:
           abelvanoosterwijk.com/publicaties/{{ paginanaam }}/.
-      - label: Title
+      - label: Titel van artikel
         name: title
         widget: string
         hint: Je kan `*italics*` en `**bold**` gebruiken.
-      - label: Subtitle
+      - label: Ondertitel van artikel
         name: summary
         widget: string
         required: false
         hint: Je kan `*italics*` en `**bold**` gebruiken.
-      - label: Publish Date
+      - label: Publicatiedatum
         name: date
         widget: datetime
-      - label: Draft
+      - label: Verberg op website
         name: draft
         widget: boolean
         default: false
-        hint: Drafts zijn niet zichtbaar op de site.
-      - label: Article URL
+      - label: URL naar artikel
         name: link
         widget: string
         required: false
         hint: |
           Link naar het artikel op een andere website. Laat leeg voor een
           artikel op deze website.
-      - label: Article Text
+      - label: Tekst van artikel
         name: body
         widget: markdown
         required: false
-        hint: De tekst voor een artikel op deze website.
+        hint: De tekst voor een artikel op deze website. Mag leeg blijven.

@@ -1,16 +1,13 @@
 {{ define "main" }}
-<main role="main">
+<main>
 	<h2>Publicaties</h2>
-	{{ range .Site.RegularPages }}
-		<a class="invisible" href='{{ cond (isset .Params "link") .Params.link .RelPermalink }}'>
-			<article>
-					<h4>
-						{{ .Title | markdownify }}
-						({{ .Date.Year }})
-					</h4>
-					{{ .Summary | truncate 300 }}
-			</article>
-		</a>
+	{{ range (where site.Pages "Section" "publicaties") }}
+	<a class="nodecoration" href='{{ cond (isset .Params "link") .Params.link .RelPermalink }}'>
+		<article>
+			<h3>{{ .Title | markdownify }} ({{ .Date.Year }})</h3>
+			<p>{{ .Summary | truncate 300 }}</p>
+		</article>
+	</a>
 	{{ end }}
 </main>
 {{ end }}

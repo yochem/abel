@@ -22,17 +22,14 @@
 
 <body>
 	<header>
-		<h1><a href="/" class="invisible">{{ site.Title }}</a></h1>
-		<p class="email">
-			<a href="mailto:{{ site.Params.email }}">
-				{{ site.Params.email }}
-			</a>
+		<h1><a href="/" class="nodecoration">{{ site.Title }}</a></h1>
+		<p id="email">
+			<a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
 		</p>
+		<hr>
 	</header>
 
-	<div id="content">
-		{{- block "main" . }}{{- end }}
-	</div>
+	{{- block "main" . }}{{- end }}
 </body>
 
 </html>
